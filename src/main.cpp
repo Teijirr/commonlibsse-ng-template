@@ -1,7 +1,13 @@
+void OnDataLoaded()
+{
+	SKSE::log::info("Data loaded");
+}
+
 void MessageHandler(SKSE::MessagingInterface::Message* a_msg)
 {
 	switch (a_msg->type) {
 	case SKSE::MessagingInterface::kDataLoaded:
+		OnDataLoaded();
 		break;
 	case SKSE::MessagingInterface::kPostLoad:
 		break;
@@ -17,6 +23,8 @@ void MessageHandler(SKSE::MessagingInterface::Message* a_msg)
 SKSEPluginLoad(const SKSE::LoadInterface* a_skse)
 {
 	SKSE::Init(a_skse);
+
+	SKSE::log::info("Start");
 
     auto messaging = SKSE::GetMessagingInterface();
 	if (!messaging->RegisterListener("SKSE", MessageHandler)) {
