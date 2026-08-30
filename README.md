@@ -16,7 +16,15 @@ Or clone with your IDE and run this command:
 git submodule update --init --recursive
 ```
 
-Change project name and author in xmake.lua
+### Change project name and author in xmake.lua
+
+### Update commonlibng : 
+```
+cd lib/commonlibsse-ng
+git fetch --tags
+git checkout ng
+git pull
+```
 
 ### Build
 To build the vs project, run the following command:
