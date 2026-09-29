@@ -8,11 +8,11 @@ This is a basic plugin template using CommonLibSSE-NG.
 
 ## Getting Started
 ```bat
-git clone --recurse-submodules https://github.com/Teijirr/commonlibsse-ng-template/
+git clone --recurse-submodules MYGITHUBURL
 cd commonlibsse-ng-template
-```
-Or clone with your IDE and run this command:
-```
+git submodule deinit -f lib/commonlibsse-ng
+git rm -f lib/commonlibsse-ng
+git submodule add https://github.com/alandtse/CommonLibSSE-NG.git lib/commonlibsse-ng
 git submodule update --init --recursive
 ```
 
@@ -22,8 +22,8 @@ git submodule update --init --recursive
 ```
 cd lib/commonlibsse-ng
 git fetch --tags
-git checkout ng
-git pull
+git checkout main
+git pull origin main
 ```
 
 ### Build
