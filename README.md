@@ -8,7 +8,7 @@ This is a basic plugin template using CommonLibSSE-NG.
 
 ## Getting Started
 ```bat
-git clone MYGITHUBURL
+git clone MYGITHUBURL commonlibsse-ng-template
 cd commonlibsse-ng-template
 git submodule add https://github.com/alandtse/CommonLibSSE-NG.git lib/commonlibsse-ng
 git submodule update --init --recursive
